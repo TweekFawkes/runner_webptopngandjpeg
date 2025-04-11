@@ -23,7 +23,7 @@ def convert_webp_to_png_and_jpeg(base_filename, quality=85):
               Note: Individual PNG/JPEG conversion errors are printed but don't stop
               the other conversion attempt.
     """
-    input_path = os.path.join(INPUT_FOLDER, base_filename + ".webp")
+    input_path = os.path.join(INPUT_FOLDER, base_filename)
     output_png_path = os.path.join(OUTPUT_FOLDER, base_filename + ".png")
     output_jpg_path = os.path.join(OUTPUT_FOLDER, base_filename + ".jpg") # Use .jpg
 
