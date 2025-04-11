@@ -1,6 +1,6 @@
 runner:
-  name: Animated WebP to PNG and JPG
-  description: Convert WebP file to PNG and JPG formats.
+  name: WebP to PNG and JPG
+  description: Convert a WebP file to PNG and JPG formats.
   version: 0.0.1
 
 build:
