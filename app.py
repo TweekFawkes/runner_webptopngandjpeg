@@ -24,8 +24,16 @@ def convert_webp_to_png_and_jpeg(base_filename, quality=85):
               the other conversion attempt.
     """
     input_path = os.path.join(INPUT_FOLDER, base_filename)
-    output_png_path = os.path.join(OUTPUT_FOLDER, base_filename + ".png")
-    output_jpg_path = os.path.join(OUTPUT_FOLDER, base_filename + ".jpg") # Use .jpg
+
+    
+    # Remove the extension from the base_filename ".webp"
+    if base_filename.endswith(".webp"):
+        str_core_filename = base_filename[:-5]
+    else:
+        str_core_filename = base_filename
+    
+    output_png_path = os.path.join(OUTPUT_FOLDER, str_core_filename + ".png")
+    output_jpg_path = os.path.join(OUTPUT_FOLDER, str_core_filename + ".jpg") # Use .jpg
 
     try:
         # 1. Validate input path
