@@ -1,0 +1,20 @@
+runner:
+  name: Animated WebP to PNG and JPG
+  description: Convert WebP file to PNG and JPG formats.
+  version: 0.0.1
+
+build:
+  memorysize: 1280
+  commands: |
+    echo "START: Building the runner"
+    apt install -y webp libwebp-dev
+    python3 -m pip install -U -r requirements.txt
+    echo "END: Building the runner"
+
+webform:
+  - name: image_name
+    prompt: WebP File to Convert
+    type: file
+
+launch:
+  command: app.py --filename ${image_name}
